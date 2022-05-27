@@ -11,6 +11,77 @@
     @content;
   }
 }
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* 600px Break Point *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+@mixin media-medium {
+  @media screen and (max-width: break-point(break-point-medium)) {
+    @content;
+  }
+}
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* 400px Break Point *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+@mixin media-small {
+  @media screen and (max-width: break-point(break-point-small)) {
+    @content;
+  }
+}
+
+::selection {
+  background-color: var(--color-primary);
+}
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Placeholders *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+// ******** Background Properties
+
+%bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// ******** Padding
+
+%sec-padding {
+  padding: 6vh 4vw;
+}
+
+// ******** Section headings (h2)
+
+%sec-heading {
+  font-size: font-size(font-size-medium);
+  font-weight: font-weight(font-weight-light);
+  letter-spacing: 0.2rem;
+  color: var(--color-quinary);
+}
+// ******** Section headings (p)
+
+%sec-para {
+  font-size: font-size(font-size-small);
+  font-family: 'Balsamiq Sans', cursive;
+  color: var(--color-quinary);
+  letter-spacing: 0.2rem;
+}
+
+// ******** Section headings (h3)
+
+%sec-h3 {
+  font-size: font-size(font-size-small);
+  color: var(--color-quinary);
+}
+
+// ******** Section headings (h4)
+
+%sec-h4 {
+  color: var(--color-quinary);
+}
+
+//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Dark Mode Smooth Transition fir All Html Elements *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transition *::after {
+  transition: all 0.5s !important;
+  transition-delay: 0 !important;
+}
 
 @import '1.reset';
 @import '2.variables';
@@ -24,20 +95,3 @@
 @import '10.clients';
 @import '11.register';
 @import '12.footer';
-
-
-
-
-
-
-
-
-//*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* Dark Mode Smooth Transition fir All Html Elements *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
-
-html.transition,
-html.transition *,
-html.transition *::before,
-html.transition *::after {
-  transition: all 0.5s !important;
-  transition-delay: 0 !important;
-}

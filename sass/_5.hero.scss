@@ -1,4 +1,150 @@
 .hero {
-  background-color: var(--color-tertiary);
   grid-column: container-start / container-end;
+  background-image: linear-gradient(
+      var(--color-tertiary-m),
+      var(--color-tertiary-m)
+    ),
+    url('../img/showcase/showcase-bg.jpg');
+  @extend %bg;
+  @extend %sec-padding;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &--title {
+      text-align: center;
+      font-size: font-size(font-size-large);
+      font-weight: font-weight(font-weight-light);
+      background-image: linear-gradient(
+        135deg,
+        var(--color-secondary),
+        var(--color-quinary)
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+
+    &--para {
+      font-size: font-size(font-size-regular);
+      font-weight: font-weight(font-weight-light);
+      color: var(--color-quinary);
+      margin-bottom: calc(1rem + 2vw);
+    }
+
+    &--links {
+      display: flex;
+      justify-content: center;
+
+      a:link,
+      a:visited {
+        font-size: font-size(font-size-small);
+        padding: calc(0.5rem + 1vh) calc(1rem + 1vw);
+        text-transform: uppercase;
+        position: relative;
+        border-radius: 0.5rem;
+        z-index: 1;
+        transition: all 0.5s ease-in-out;
+      }
+
+      a:first-child:link,
+      a:first-child:visited {
+        background-color: var(--color-tertiary);
+        border: 0.2rem solid var(--color-tertiary);
+        color: var(--color-quinary);
+        margin-right: calc(1rem + 2vw);
+      }
+      a:last-child:link,
+      a:last-child:visited {
+        background-color: var(--color-secondary);
+        border: 0.2rem solid var(--color-secondary);
+        color: var(--color-quinary);
+      }
+
+      a:first-child:link::before,
+      a:first-child:visited::before,
+      a:last-child:link::before,
+      a:last-child:visited::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--color-quinary);
+        border-radius: inherit;
+        z-index: -1;
+        transform: scale(0);
+        transition: all 0.5s ease-in-out;
+      }
+
+      a:first-child:hover::before,
+      a:first-child:active::before,
+      a:last-child:hover::before,
+      a:last-child:active::before {
+        transform: scale(1);
+      }
+
+      a:first-child:hover,
+      a:first-child:active {
+        color: var(--color-secondary);
+      }
+
+      a:last-child:hover,
+      a:last-child:active {
+        color: var(--color-tertiary);
+      }
+    }
+  }
+
+  @include media-tablet {
+    &__content {
+      &--title {
+        text-align: left;
+      }
+      &--links {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  @include media-medium {
+    padding: 4rem;
+
+    &__content {
+      &--title {
+        font-size: font-size(font-size-xlarge);
+        font-weight: font-weight(font-weight-regular);
+      }
+
+      &--para {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @include media-small {
+    &__content {
+      &--links {
+        flex-direction: column;
+        align-items: flex-start;
+
+        a:link, 
+        a:visited {
+          display: inline-block;
+        }
+
+        a:link:first-child,
+        a:visited:first-child {
+          margin-bottom: 5vw;
+        }
+      }
+    }
+  }
 }

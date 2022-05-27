@@ -5,6 +5,12 @@
   &.open .header__menu--line {
     background-color: transparent;
   }
+  
+  &.open .header__menu--line::before,
+  &.open .header__menu--line::after {
+    content: '';
+    top: 0;
+  }
 
   &.open .header__menu--line::before {
     transform: rotate(45deg);
@@ -14,10 +20,6 @@
     transform: rotate(-45deg);
   }
 
-  &.open .header__menu--line::before,
-  &.open .header__menu--line::after {
-    top: 0;
-  }
 
   &__overlay {
     width: 100%;
