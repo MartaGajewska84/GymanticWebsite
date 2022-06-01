@@ -16,6 +16,8 @@
     <script defer src="js/nav.js"></script>
     <script defer src="js/dark-mode.js"></script>
     <script defer src="js/testimonials.js"></script>
+    <script defer src="js/scroll.js"></script>
+    <script defer src="js/form.js"></script>
     <link rel="shortcut icon" type="image/svg" href="img/logo/favicon.svg" />
 
     <link rel="stylesheet" href="css/main-styles.css" />
@@ -389,11 +391,280 @@
       </div>
     </section>
     <!---*-*-*-*-*-*-*-*--*-*-*- Clients Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <section class="clients">CLIENTS</section>
+    <section class="clients">
+      <h2 class="clients__title">Our Clients</h2>
+      <div class="clients__content">
+        <div class="clients__content--img">
+          <img src="img/clients/client-1.png" alt="client-1" />
+        </div>
+        <div class="clients__content--img">
+          <img src="img/clients/client-2.png" alt="client-2" />
+        </div>
+        <div class="clients__content--img">
+          <img src="img/clients/client-3.png" alt="client-3" />
+        </div>
+        <div class="clients__content--img">
+          <img src="img/clients/client-4.png" alt="client-4" />
+        </div>
+        <div class="clients__content--img">
+          <img src="img/clients/client-5.png" alt="client-5" />
+        </div>
+        <div class="clients__content--img">
+          <img src="img/clients/client-6.png" alt="client-6" />
+        </div>
+        <div class="clients__content--img">
+          <img src="img/clients/client-7.png" alt="client-7" />
+        </div>
+        <div class="clients__content--img">
+          <img src="img/clients/client-8.png" alt="client-8" />
+        </div>
+      </div>
+    </section>
+    <!---*-*-*-*-*-*-*-*--*-*-*- Scroll to Top Button --*-*-*-*-*-*-*-*-*-*-*-->
+    <div class="scroll"></div>
     <!---*-*-*-*-*-*-*-*--*-*-*- Register Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <section class="register">REGISTER</section>
+    <section class="register">
+      <!-- Register Progress -->
+      <div class="register__progress">
+        <div class="register__progress--step">
+          <span>1</span>
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="register__progress--step">
+          <span>2</span>
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="register__progress--step">
+          <span>3</span>
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="register__progress--step">
+          <span>4</span>
+          <i class="fa fa-check"></i>
+        </div>
+      </div>
+      <!-- Register Content -->
+      <div class="register__content">
+        <div class="register__content--form">
+          <!-- First Page -->
+          <div class="register__content--form__page">
+            <!-- First Name -->
+            <div class="register__content--form__page--field">
+              <label for="first-name">First Name</label>
+              <input type="text" />
+            </div>
+            <!-- Last Name -->
+            <div class="register__content--form__page--field">
+              <label for="last-name">Last Name</label>
+              <input type="text" />
+            </div>
+            <!-- Next Button -->
+            <div class="register__content--form__page--field">
+              <button class="next-1 next">Next</button>
+            </div>
+          </div>
+          <!-- Second Page -->
+          <div class="register__content--form__page">
+            <!-- Email Address -->
+            <div class="register__content--form__page--field">
+              <label for="email-address">Email Address</label>
+              <input type="email" />
+            </div>
+            <!-- Phone Number -->
+            <div class="register__content--form__page--field">
+              <label for="phone-number">Phone Number</label>
+              <input type="number" />
+            </div>
+            <!-- Buttons -->
+            <div class="register__content--form__page--field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="next-2 next">Next</button>
+            </div>
+          </div>
+          <!-- Third Page -->
+          <div class="register__content--form__page">
+            <!-- Date of Birth -->
+            <div class="register__content--form__page--field">
+              <label for="date-of-birth">Date of Birth</label>
+              <input type="text" />
+            </div>
+            <!-- Gender -->
+            <div class="register__content--form__page--field">
+              <label for="gender">Gender</label>
+              <select>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <!-- Buttons -->
+            <div class="register__content--form__page--field btns">
+              <button class="prev-2 prev">Previous</button>
+              <button class="next-3 next">Next</button>
+            </div>
+          </div>
+          <!-- Fourth Page -->
+          <div class="register__content--form__page">
+            <!-- Username -->
+            <div class="register__content--form__page--field">
+              <label for="username">Username</label>
+              <input type="text" />
+            </div>
+            <!-- Password -->
+            <div class="register__content--form__page--field">
+              <label for="password">Password</label>
+              <input type="password" />
+            </div>
+            <!-- Buttons -->
+            <div class="register__content--form__page--field btns">
+              <button class="prev-3 prev">Previous</button>
+              <button class="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!---*-*-*-*-*-*-*-*--*-*-*- Footer Section --*-*-*-*-*-*-*-*-*-*-*-->
-    <footer class="footer">FOOTER</footer>
-  
+    <footer class="footer">
+      <!-- Footer content -->
+      <div class="footer__content">
+        <!-- About us -->
+        <div class="footer__content--about-us footer__content--section">
+          <i class="fas fa-user-friends"></i>
+          <h3
+            class="footer__content--about-us__title footer__content--section__title"
+          >
+            About us
+          </h3>
+          <a
+            href="#"
+            class="footer__content--about-us__link footer__content--section__link"
+            >gYmantic in a nutshell</a
+          >
+          <a
+            href="#"
+            class="footer__content--about-us__link footer__content--section__link"
+            >What we do</a
+          >
+          <a
+            href="#"
+            class="footer__content--about-us__link footer__content--section__link"
+            >History</a
+          >
+          <a
+            href="#"
+            class="footer__content--about-us__link footer__content--section__link"
+            >Location</a
+          >
+          <a
+            href="#"
+            class="footer__content--about-us__link footer__content--section__link"
+            >Management Team</a
+          >
+        </div>
+        <!-- Gym classes -->
+        <div class="footer__content--classes footer__content--section">
+          <i class="fas fa-dumbbell"></i>
+          <h3
+            class="footer__content--classes__title footer__content--section__title"
+          >
+            Gym Classes
+          </h3>
+          <a
+            href="#"
+            class="footer__content--classes__link footer__content--section__link"
+            >Overview</a
+          >
+          <a
+            href="#"
+            class="footer__content--classes__link footer__content--section__link"
+            >Classes Alternate View</a
+          >
+          <a
+            href="#"
+            class="footer__content--classes__link footer__content--section__link"
+            >Class Pricing</a
+          >
+          <a
+            href="#"
+            class="footer__content--classes__link footer__content--section__link"
+            >Single Class</a
+          >
+          <a
+            href="#"
+            class="footer__content--classes__link footer__content--section__link"
+            >Find Out More</a
+          >
+        </div>
+        <!-- Newsletter -->
+        <div class="footer__content--newsletter footer__content--section">
+          <i class="far fa-newspaper"></i>
+          <h3
+            class="footer__content--newsletter__title footer__content--section__title"
+          >
+            Newsletter
+          </h3>
+          <p
+            class="footer__content--newsletter__para footer__content--section__para"
+          >
+            Subscribe to our newsletter to receive regular updates & new from
+            us.
+          </p>
+          <input type="email" placeholder="Your Email" />
+          <input type="submit" value="Send" />
+        </div>
+        <!-- Head Office -->
+        <div class="footer__content--address footer__content--section">
+          <!-- Address -->
+          <i class="fas fa-map-marked-alt"></i>
+          <h3
+            class="footer__content--address__title footer__content--section__title"
+          >
+            Head Office
+          </h3>
+          <p
+            class="footer__content--address__para footer__content--section__para"
+          >
+            1778 Baker Street, NYC, USA
+          </p>
+
+          <!-- Email -->
+          <i class="far fa-envelope-open"></i>
+          <h3 class="footer__content--address__title footer__content--section__title">
+            Email Us
+          </h3>
+          <p class="footer__content--address__para footer__content--section__para">
+            info@gymantic.cool
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer logo -->
+      <div class="footer__logo">
+        <img src="img/logo/footer.svg" alt="footer-logo" />
+        <span>gYmantic</span>
+      </div>
+      <!-- Footer social -->
+      <div class="footer__social">
+        <div class="footer__social--call">
+          <i class="fas fa-phone-alt"></i>
+          <p class="footer__social--call__para">CALL US NOW: xxxx xxxx xxx</p>
+        </div>
+        <div class="footer__social--icons">
+          <a href="#" class="footer__social--icons__link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="footer__social--icons__link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="footer__social--icons__link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="footer__social--icons__link">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
